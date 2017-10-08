@@ -11,7 +11,7 @@ appId:630b90d2-282a-4ea1-a50c-65fe9651edf3,
 appPassword:tTxuwL6Tt9hQtKz6CHjuiC3
 });
 // Listen for messages from users
-server.post('https://irona9.azurewebsites.net/api/messages', connector.listen());
+server.post('http://irona9.azurewebsites.net/api/messages', connector.listen());
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
 var bot = new builder.UniversalBot(connector, function (session) {
 session.send("You said: %s", session.message.text);
